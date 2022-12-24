@@ -8,10 +8,10 @@ This Repository Contains The Challenges of Securinets Christmas CTF 2022
 | :-------------------------: | :-------------: |
 |         [Pwn](Pwn/)         |       8        |
 |       [OSINT](OSINT/)       |       11        |
-|      [Crypto](Crypto/)      |       0        |
-|         [Web](Web/)         |        0       |
+|      [Crypto](Crypto/)      |       10        |
+|         [Web](Web/)         |        9       |
 |   [Reversing](Reversing/)   |        6        |
-|   [Forensics](Forensics/)   |        0        |
+|   [Forensics](Forensics/)   |        14        |
 |        [Misc](Misc/)        |        2        |
 |        [Blockchain](Blockchain/)        |        3        |
 
