@@ -12,6 +12,6 @@ This Repository Contains The Challenges of Securinets Christmas CTF 2022
 |         [Web](Web/)         |        9       |
 |   [Reversing](Reversing/)   |        6        |
 |   [Forensics](Forensics/)   |        14        |
-|        [Misc](Misc/)        |        2        |
+|        [Misc](Misc/)        |        10        |
 |        [Blockchain](Blockchain/)        |        3        |
 
