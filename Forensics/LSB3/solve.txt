@@ -1,0 +1,1 @@
+stegolsb steglsb -r  -o flag.png -i LSB2.png -n 2

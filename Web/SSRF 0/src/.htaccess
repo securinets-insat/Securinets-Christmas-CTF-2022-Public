@@ -1,0 +1,4 @@
+<Files *.txt>
+    Require host lamtakam.test lamtakam.com
+    Require ip 127.0.0.1
+</Files>

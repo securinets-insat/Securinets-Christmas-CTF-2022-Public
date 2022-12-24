@@ -1,0 +1,4 @@
+My swiss friend dared me to guess the IP address of the camera that took this picture.
+If I win, he would take me there when i visit him this summer.
+Can you help me? 
+Flag format: Securinets{X.X.X.X}

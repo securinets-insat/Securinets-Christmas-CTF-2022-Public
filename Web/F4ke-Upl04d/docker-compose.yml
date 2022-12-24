@@ -1,0 +1,8 @@
+services:
+  web:
+    build: .
+    ports:
+      - "5000:8000"
+    environment:
+      PORT: 8000
+      FLAG: "securinets{4lw4y5_ch3ck_m461c_numb3r5}"

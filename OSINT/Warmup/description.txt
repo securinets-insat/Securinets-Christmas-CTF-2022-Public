@@ -1,0 +1,2 @@
+Where was this photo taken?
+Flag format: Securinets{CITY_COUNTRY}

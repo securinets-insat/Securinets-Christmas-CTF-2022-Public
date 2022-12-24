@@ -1,0 +1,40 @@
+
+class The_Workshop_Battle():
+    def __init__(self,flag):
+        self.flag=bytes_to_long(flag)
+        self.q=getPrime(512)
+        self.p=getPrime(512)
+        self.phi=(self.p-1)*(self.q-1)
+
+        self.n=self.p*self.q
+        self.e=65537
+        self.d=inverse(self.e,self.phi)
+    def sign(self,msg):
+        if b"admin" not in bytes.fromhex(msg):
+            return json.dumps({"signature":hex(pow(int(msg,16),self.d,self.n)),"N":self.n,"e":self.e})
+        else:
+            return json.dumps({"signature":pow(31066278741462331364812614761,self.d,self.n),"N":self.n,"e":self.e})
+    def verify(self,signature):
+        signature=pow(int(signature,16),self.e,self.n)
+        if long_to_bytes(signature)==b"admin":
+            return long_to_bytes(self.flag)
+        else:
+            return "get out Regular !"
+    def start_floor_test(self):
+        while True:
+            your_input=json.loads(input())
+            if not 'option' in your_input:
+                    return {"error": "U better choose something or die alone"}
+            elif your_input['option'] == 'sign':
+                msg = your_input['msg']
+                print(self.sign(msg))
+
+            elif your_input['option']=="verify":
+
+                sig=your_input["signature"]
+                print(self.verify(sig))
+
+            elif your_input['option']=='return to tower':
+                break
+            else:
+                return {"error": "Invalid option"}

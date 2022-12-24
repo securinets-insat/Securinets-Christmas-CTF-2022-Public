@@ -1,0 +1,40 @@
+class Mirror_World():
+    def __init__(self,flag):
+        self.flag=bytes_to_long(flag)
+        self.q=getPrime(512)
+        self.p=getPrime(512)
+        self.n=self.p*self.q
+        self.e=3
+        self.check=0
+        
+    def encrypt_flag(self):
+        if self.check!=1:
+            self.check+=1
+            x=randint(0,self.n-1)
+            y=randint(0,self.n-1)
+            padded_flag=(x*self.flag+y)%self.n
+            return json.dumps({"encrypted_flag":pow(self.flag,self.e,self.n),"N":self.n,"e":self.e,"X":x,"Y":y})
+        else:
+            return json.dumps({"ALERT":"You cant fool zahard 2 times regular"})
+    def encrypt(self,msg):
+
+        return json.dumps({"encrypted_msg":pow(int(msg,16),self.e,self.n),"N":self.n,"e":self.e})
+    
+    def start_floor_test(self):
+        while True:
+            your_input=json.loads(input())
+            if not 'option' in your_input:
+                    return {"error": "U better choose something or die alone"}
+            elif your_input['option'] == 'get_flag':
+                print(self.encrypt_flag())
+
+            elif your_input['option'] == 'sign':
+                try :
+                    msg = your_input['msg']
+                    print(self.encrypt(msg))
+                except:
+                    pass
+            elif your_input['option']=='return to tower':
+                break
+            else:
+                return {"error": "Invalid option"}

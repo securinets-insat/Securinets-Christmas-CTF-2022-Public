@@ -1,0 +1,45 @@
+class FLOOR_OF_DEATH():
+    def __init__(self,flag):
+        self.flag=bytes_to_long(flag)
+        self.q=getPrime(512)
+        self.p=(self.getsmoothprime(512)-1)
+        self.n=self.p*self.q
+        self.e=109480
+    def getsmoothprime(self,size):
+        f=eval(open('primes.txt','r').read())
+        shuffle(f)
+        p=2*23**2
+        i=0
+        while True:
+            p=p*f[i]
+            if isPrime(p+1) and len(bin(p))>size:
+                return p+1
+            i+=1
+            if len(bin(p))>2*size:
+                i=0
+                shuffle(f)
+                p=2
+
+    def encrypt_flag(self):
+        return json.dumps({"encrypted_flag":pow(self.flag,self.e,self.n),"N":self.n,"e":self.e})
+    def encrypt(self,msg):
+        return json.dumps({"encrypted_msg":pow(int(msg,16),self.e,self.n),"N":self.n,"e":self.e})
+    
+    def start_floor_test(self):
+        while True:
+            your_input=json.loads(input())
+            if not 'option' in your_input:
+                    return {"error": "U better choose something or die alone"}
+            elif your_input['option'] == 'get_flag':
+                print(self.encrypt_flag())
+
+            elif your_input['option'] == 'encrypt':
+                try :
+                    msg = your_input['msg']
+                    print(self.encrypt(msg))
+                except:
+                    pass
+            elif your_input['option']=='return to tower':
+                break
+            else:
+                return {"error": "Invalid option"}

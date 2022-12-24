@@ -1,0 +1,18 @@
+contract: CryptoLeague # Challenge contract name(class name)
+
+# The description will be displayed when players nc to the challenge
+description: |
+  Welcome to CryptoLeague,The project's ultimate goal is to turn one of the selected players into the star striker for the Tunisian national team. To find the best participant, each diamond in the rough must compete against others through a series of solo and team competitions to rise to the top. Putting aside his ethical objections to the project.
+  ~ Yeah it's blue lock's description but the project got upgraded to use crypto ;).
+
+flag: securinets{h3y_d0n7_c0rrup7_my_570r463_v4r14bl3}
+
+constructor:
+  args: ["0x84e7a3679A82C2766Ff8382862ab883FF9460307"]
+  value: 100000000000000
+  #gas: 1000000          # The default value is the response value of the eth_estimateGas JSON-RPC
+# show_source: False      # Show source option available by default, you need to set False for a reverse contract challenge
+
+# solved_event: SendFlag  # The default is to use isSolved() view function as solved checker, but emitted event checker is also supported
+
+#deployed_addr: 0xdac17f958d2ee523a2206206994597c13d831ec7  # Use a pre-deployed contract for all players instead of deploying individually

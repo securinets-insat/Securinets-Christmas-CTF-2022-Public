@@ -1,0 +1,18 @@
+contract: CryptoLeagueV2 # Challenge contract name(class name)
+
+# The description will be displayed when players nc to the challenge
+description:
+  Because our big failure in the last world cup. The whole country still in despair as many players were not worth the money. So after big changes, it was announced that now we have the dream team and we will never lose again.
+  Is there hope really ?
+
+flag: securinets{w417_4r3_y0u_7h47_600d_w17h_50l1d17y_7yp35c0nv3r510n?}
+
+constructor:
+  args: ["0x84e7a3679A82C2766Ff8382862ab883FF9460307"]
+  value: 100000000000000
+  #gas: 1000000          # The default value is the response value of the eth_estimateGas JSON-RPC
+# show_source: False      # Show source option available by default, you need to set False for a reverse contract challenge
+
+# solved_event: SendFlag  # The default is to use isSolved() view function as solved checker, but emitted event checker is also supported
+
+#deployed_addr: 0xdac17f958d2ee523a2206206994597c13d831ec7  # Use a pre-deployed contract for all players instead of deploying individually

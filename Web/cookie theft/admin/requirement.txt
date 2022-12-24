@@ -1,0 +1,6 @@
+flask
+regex
+requests
+threaded
+pyodbc
+

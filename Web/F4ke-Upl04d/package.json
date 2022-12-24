@@ -1,0 +1,20 @@
+{
+  "name": "f4ke-upl04d",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.1",
+    "multer": "^1.4.5-lts.1",
+    "nunjucks": "^3.2.3"
+  }
+}

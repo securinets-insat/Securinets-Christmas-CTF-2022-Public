@@ -1,0 +1,32 @@
+class Flour_of_test():
+    def __init__(self,flag):
+        self.flag=bytes_to_long(flag)
+        self.e=3
+    def encrypt_flag(self):
+        p=getPrime(512)
+        q=getPrime(512)
+        n=p*q
+        return json.dumps({"encrypted_flag":pow(self.flag,self.e,n),"N":n,"e":3})
+    def encrypt(self,msg):
+        p=getPrime(512)
+        q=getPrime(512)
+        n=p*q
+        return json.dumps({"encrypted_msg":pow(int(msg,16),self.e,n),"N":n})
+    def start_floor_test(self):
+        while True:
+            your_input=json.loads(input())
+            if not 'option' in your_input:
+                    return {"error": "U better choose something or die alone"}
+            elif your_input['option'] == 'get_flag':
+                print(self.encrypt_flag())
+
+            elif your_input['option'] == 'sign':
+                try :
+                    msg = your_input['msg']
+                    print(self.encrypt(msg))
+                except:
+                    pass
+            elif your_input['option']=='return to tower':
+                break
+            else:
+                return {"error": "Invalid option"}

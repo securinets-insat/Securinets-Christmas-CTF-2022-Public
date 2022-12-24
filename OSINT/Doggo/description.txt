@@ -1,0 +1,5 @@
+Can you find when the pictures in this Pinterest post were taken?
+Post id: 505529126920641586
+It may help if you find the place, you won't regret it ;)
+And be careful, you only have 5 attempts.
+Flag format: Securinets{MONTH_YEAR}

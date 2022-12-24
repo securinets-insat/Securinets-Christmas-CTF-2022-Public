@@ -1,0 +1,9 @@
+We received many reports regarding an account on our social media platform, that we believe is a fake account.
+The person behind it kept sending malicious websites in private messages to other users, after engaging in conversations.
+The account has been blocked, but we need your help finding the real person behind the account.
+
+The username was: gyorfydeco
+Can you find any other fake account this person may have created ?
+A profile ID will be perfect.
+
+Flag format: Securinets{SOCIALMEDIANAME_ID}
